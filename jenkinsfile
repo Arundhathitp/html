@@ -20,7 +20,7 @@ pipeline {
                 echo 'Deploying the web application...'
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-credentials') {
-                        def customImage = docker.build('arundhathitp/htmlp:v1', '.')
+                        def customImage = docker.build('arundhathitp/htmlfirst:v2', '.')
                         customImage.push()
                     }
                 }
