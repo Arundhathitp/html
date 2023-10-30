@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: html
+spec:
+  replicas: 1  
+  selector:
+    matchLabels:
+      app: html
+  template:
+    metadata:
+      labels:
+        app: html
+    spec:
+      containers:
+      - name: html
+        image: arundhathitp/htmlfirst:v2  # Replace with your Docker image name and tag
+        ports:
+        - containerPort: 80
+        - containerPort: 85
