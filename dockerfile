@@ -10,7 +10,8 @@ COPY styles.css .
 COPY script.js .
 
 # Expose the default Nginx port (80)
-EXPOSE 8000
+EXPOSE 80
+EXPOSE 85
 
 # Run the Nginx server as the default command
 CMD ["nginx", "-g", "daemon off;"]
